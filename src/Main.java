@@ -1,27 +1,36 @@
-class Main{
-    Scanner scanner =  new Scanner(System.in);
-    double balance;
-    boolean isRunning = true;
-    int choice;
+class Student{
+     int roll_no;
+     int age;
+     String name;
+     Student()
+     {
+         roll_no = 28;
+         age = 18;
+         name = "Naman";
 
-    System.out.println("*****************");
-    System.out.println("Banking Program");
-    System.out.println("*****************");
-    System.out.println("1. Show Balance");
-    System.out.println("2. Deposit");
-    System.out.println("3. Withdraw");
-    System.out.println("4. Exit");
-    System.out.println("*****************");
+     }
+     Student(int r ,String n ,int a ){
 
-    System.out.print("Enter your choice (1-4): ");
-    choice = scanner.nextInt();
+         roll_no = r;
+         name = n;
+         age = a;
 
-    switch(choice){
+     }
+     void show()
+     {
+         System.out.println("Name: " +name);
+         System.out.println("Roll NO.: " +roll_no);
+         System.out.println("Age: "+ age);
 
-        case 1: System.out.println("SHOW BALANCE");
-        case 2: System.out.println("DEPOSIT");
-        case 3: System.out.println("Withdraw");
-        case 4: isRunning = false;
+     }
+     public static void main(String[] args){
+         Student s = new Student();
+         System.out.println("Student Information");
+         s.show();
+         Student s1 = new Student(41 , "Abeer" ,  18);
+         Student s2 = new Student(52 , "Aditya" , 19);
+         s1.show();
+         s2.show();
 
-    }
+     }
 }
